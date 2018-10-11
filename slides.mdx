@@ -1,0 +1,61 @@
+import { CodeSurfer } from "mdx-deck-code-surfer"
+export { dark as theme } from 'mdx-deck/themes'
+import nightOwl from "prism-react-renderer/themes/nightOwl"
+
+<!--- Title -->
+# Pattern Matching
+## in js
+
+---
+
+<!--- Bio -->
+# Juan Caicedo
+
+---
+
+# What's wrong with `switch`?
+
+---
+
+# 900 million
+## Test
+
+---
+
+# NodeJS: Switch is EVIL
+
+---
+
+<CodeSurfer
+  code={require("!raw-loader!./imprimir-en-español.js")}
+  theme={nightOwl}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { lines: [1, 12] },
+    { lines: [2, 11] },
+    { range: [3, 10] },
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  code={require("!raw-loader!./imprimir-en-español-con-bugs.js")}
+  theme={nightOwl}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { range: [1, 14]},
+    { lines: [3, 4] },
+    { lines: [5, 6, 7] },
+    { lines: [8, 9, 10] },
+    { lines: [11, 12] },
+    { lines: [16, 17], range: [5, 6] },
+    { lines: [19, 20], range: [8, 10] },
+    { lines: [22, 23, 24], range: [3, 7] },
+    { lines: [26, 27], range: [8, 10] },
+  ]}
+/>
